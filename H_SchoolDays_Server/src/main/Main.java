@@ -13,5 +13,6 @@ public class Main {
 		File config = new File("config.properties");
 		StudentPacketExecutor executor = StudentPacketExecutor.getInstance();
 		ServerMain.load(config, new PacketHandler(executor), executor);
+		System.out.println("Netty Server Open");
 	}
 }
