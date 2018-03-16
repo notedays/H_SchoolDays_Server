@@ -3,16 +3,16 @@ package main;
 import java.io.File;
 import java.io.IOException;
 
-import com.schoolDays.himaginus.server.main.ServerMain;
+import com.himaginus.server.main.ServerMain;
+import com.himaginus.server.process.PacketHandler;
 
 import process.StudentPacketExecutor;
-import process.PacketHandler;
 
 public class Main {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		File config = new File("config.properties");
 		StudentPacketExecutor executor = StudentPacketExecutor.getInstance();
-		ServerMain.load(config, new PacketHandler(executor), executor);
+		ServerMain.load(config, new PacketHandler(executor));
 		System.out.println("Netty Server Open");
 	}
 }

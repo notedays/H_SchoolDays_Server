@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.himaginus.common.data.CityData;
-import com.schoolDays.himaginus.server.database.DataController;
-import com.schoolDays.himaginus.server.database.DataMap;
+import com.himaginus.server.database.DataController;
+import com.himaginus.server.database.DataMap;
 
 public class SchoolDataController extends DataController {
 	private static SchoolDataController sdc = new SchoolDataController();

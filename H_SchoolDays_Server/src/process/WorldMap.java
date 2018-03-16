@@ -2,7 +2,7 @@ package process;
 
 import java.util.Hashtable;
 
-import data.StudentData;
+import com.himaginus.common.goback.data.StudentData;
 
 public class WorldMap {
 
