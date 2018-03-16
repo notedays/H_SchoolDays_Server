@@ -7,13 +7,13 @@ import com.himaginus.common.data.CityData;
 import com.himaginus.server.database.DataController;
 import com.himaginus.server.database.DataMap;
 
-public class SchoolDataController extends DataController {
-	private static SchoolDataController sdc = new SchoolDataController();
+public class GoBackDataController extends DataController {
+	private static GoBackDataController sdc = new GoBackDataController();
 
-	private SchoolDataController() {
+	private GoBackDataController() {
 	}
 
-	public static SchoolDataController getInstance() {
+	public static GoBackDataController getInstance() {
 		return sdc;
 	}
 

@@ -2,24 +2,24 @@ package process;
 
 import com.himaginus.common.data.CityData;
 import com.himaginus.common.data.TestData;
-import com.himaginus.common.packet.RequestCode;
+import com.himaginus.common.goback.packet.GoBackRequestCode;
+import com.himaginus.common.goback.packet.GoBackResponseCode;
 import com.himaginus.common.packet.RequestPacket;
-import com.himaginus.common.packet.ResponseCode;
 import com.himaginus.common.packet.ResponsePacket;
 import com.himaginus.server.process.PacketExecutor;
 
-import database.SchoolDataController;
+import database.GoBackDataController;
 import io.netty.channel.ChannelHandlerContext;
 
-public class StudentPacketExecutor implements PacketExecutor, RequestCode, ResponseCode{
+public class GoBackPacketExecutor implements PacketExecutor, GoBackRequestCode, GoBackResponseCode{
 	
-	private static StudentPacketExecutor executor = new StudentPacketExecutor();
-	private StudentPacketExecutor() {}
-	public static StudentPacketExecutor getInstance(){
+	private static GoBackPacketExecutor executor = new GoBackPacketExecutor();
+	private GoBackPacketExecutor() {}
+	public static GoBackPacketExecutor getInstance(){
 		return executor;
 	}
 	
-	public SchoolDataController sdc = SchoolDataController.getInstance();
+	private GoBackDataController sdc = GoBackDataController.getInstance();
 	
 	@Override
 	public void execute(ChannelHandlerContext session, RequestPacket request) {
